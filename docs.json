@@ -66,14 +66,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Gitee",
+        "href": "https://gitee.com/myteng/MeEdu"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "首页",
+      "href": "https://www.meedu.vip"
     }
   },
   "footer": {
