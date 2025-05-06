@@ -1,5 +1,127 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: '使用宝塔+Docker安装MeEdu'
 ---
+
+## 准备
+
+您需要准备一台服务器，且安装了 Linux 操作系统，同时已经完成了宝塔面板的安装。如果您还不知道宝塔面板是什么的话，您可以百度搜索了解下。
+
+下文将假设您已经完成了上述的操作。
+
+## 开始安装
+
+### 下载程序
+
+浏览器打开 [https://gitee.com/myteng/MeEdu/tags](https://gitee.com/myteng/MeEdu/tags) 可以看到：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/RQ6xlWiG5puQN5R4." />
+
+### 上传到服务器
+
+进入到宝塔后台，左侧菜单点击“文件”
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/yyCfRZsNLEq6wnjC." />
+
+选择下载的程序，上传到服务器，并完成解压
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/uqz5miGTEO5EI7kD." />
+
+### 编译镜像
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/4RwCFcalBCbnviiY." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/WESNElNG10E9ZG4W." />
+
+安装完成，刷新页面
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/eTAnMT4BXpL9vIuC." />
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/hQjLTDuBYsMM6NEf." />
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/qgz2hsVuIZ324Agw." />
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/JvUgq3m7HX2yDHJw." />
+会有一个漫长的等待过程i
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/GnOlNS8D1Elj66TF." />
+编译终于完成了，可以看到程序已经在跑了：
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/c57q9bHfpXTx9roz." />
+
+我们可以在浏览器打开下面的地址访问 meedu 的服务啦：
+
+**需要注意的是，您的服务器防火墙必须放开 8000,8100,8200,,8300 的外网访问!**
+
+| 端口 | 地址 |
+| --- | --- |
+| 后台管理 | `http://服务器IP:8300` |
+| PC 学员端| `http://服务器IP:8100` |
+| H5 学员端| `http://服务器IP:8200` |
+| API 端口 | `http://服务器IP:8000` |
+
+> 备注：后台的默认管理员账号 `meedu@meedu.meedu` ，默认管理员密码 `meedu123`
+
+到这里，可以尽情的享用 meedu 精致的 UI 了！😄
+
+## 配置域名访问
+
+在享受一番 meedu 之后，发现了一个问题，那就是访问 meedu 必须通过 `ip:port` 的形式，这就比较满发，很难记！下面将指导您配置域名访问。
+
+### 域名分配
+
+meedu 有四个服务，也就是说至少需要四个域名，我们注册的域名比如说 `meedu.xyz` 这是一个主域名，在这个主域名下我们可以分配无数个子域名。下面，我将给出我的子域名分配方案供您参考：
+
+| 端口 | 域名 |
+| --- | --- |
+| PC | `www.meedu.xyz` |
+| H5 | `m.meedu.xyz` |
+| API 服务 | `api.meedu.xyz` |
+| 后台管理 | `admin.meedu.xyz` |
+
+域名分配好了之后，我们就要将子域名解析到服务器了（如果您不知道如何将域名解析到服务器IP的话，那么您可以联系我的企业微信付费解决）。
+
+### 创建站点
+
+进入到宝塔面板的后台，点击左侧菜单的“网站”：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/2EQlId87OEgy6ftp." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/6dv7b1p5Nm0BYMsE." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/Cbe6gyMc7SxO31Ce." />
+
+到这里，假设您已经添加好四个域名的站点，接下来我们还需要进一步配置：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/pmVyJEcuZ1Ops8Az." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/rNaZBhQ4y4n7Lr7S." />
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/Xx3keoSJdLTQNGxx." />
+
+上面是配置API站点的反向代理。下面将分别给出PC、H5、后台管理的反向代理配置：
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/EsbaxdFUpvXLlgSL." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/64rmP9JAeyXCMkiZ." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/028TeKK1rmCiJHGw." />
+
+到这里，配置完成，您可以用域名去访问 meedu 的服务啦。
+
+## 开启 `HTTPS`
+
+为了站点和用户的安全，有必要开启 `HTTPS` 。进入到宝塔面板的后台，站点列表，点击站点的设置：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/CifH4Xp5HTLhEMJJ." />
+
+先关闭反向代理：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/RS29C5J5N7gbJjef." />
+
+申请SSL：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/yg9oIlIvOgmMly1t." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/Fw0bd2YS67dwueOq." />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/JsHdF0oqaxBEOlIS." />
+
+再重新开启代理：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/d6d7705392bc7af633328bea8c4c6904/y6Hpvnkh7vu2MWFc." />
+
+按照上面步骤将其它的站点也分别申请SSL。
 

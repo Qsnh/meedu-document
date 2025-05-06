@@ -1,5 +1,148 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: '使用Docker安装MeEdu'
 ---
 
+## 环境准备
+
+### 安装 `Docker`
+
+首先，您需要准备一台安装有 `Ubuntu 24.04` 或 `Ubuntu 22.04` 系的服务器。您可以使用下面的命令安装 Docker :
+
+```bash
+curl -fsSL https://download.playeduos.com/install-docker-20240705.sh | bash -s docker --mirror Aliyun
+```
+
+如果您是非 `root` 用户的话（腾讯云的机器默认是 `ubuntu` 用户；阿里云机器默认是 `root` 用户），您需要执行下面允许当前用户可以直接执行 `docker` 而不是每一次都需要添加 `sudo` 。因为这涉及到后面的定时任务配置。
+
+```bash
+sudo usermod -aG docker ubuntu
+sudo chmod a+rwx /var/run/docker.sock
+```
+
+> 上述命令中的 `ubuntu` 是我登录服务器的用户名。
+
+执行下面命令重新启动 `docker` 服务：
+
+```bash
+sudo service docker restart
+```
+
+### 安装 `Git`
+
+```bash
+sudo apt install git
+```
+
+## 开始安装
+
+执行下面命令完成 MeEdu 的安装：
+
+```bash
+cd
+
+git clone --branch main https://gitee.com/myteng/MeEdu.git meedu && cd meedu
+
+cp .env.example .env
+
+sed -i 's/^APP_KEY=.*/APP_KEY=base64:'"$(openssl rand -base64 32)"'/' .env
+
+sed -i 's/^JWT_SECRET=.*/JWT_SECRET='"$(openssl rand -base64 48)"'/' .env
+
+docker compose up -d
+```
+
+命令执行完成之后还需要等待 `30` 秒左右。`30s` 以后，您可以输入地址 `http://服务器IP:8300` 访问后台管理界面（默认的账号是 `meedu@meedu.meedu`，默认密码：`meedu123` ）了。下面是 meedu 的端口的访问地址：
+
+> 您的服务器防火墙需要开放 `8000,8100,8200,8300` 四个端口！
+
+| 端口 | 地址 |
+| --- | --- |
+| 后台 | `http://服务器IP:8300` |
+| PC | `http://服务器IP:8100` |
+| H5 | `http://服务器IP:8200` |
+| API 服务 | `http://服务器IP:8000` |
+
+
+## 域名配置
+
+### 域名分配
+
+走完上面的步骤是不是已经体验到了 MeEdu 的一些功能啦！是不是已经被 MeEdu 精致的 UI 所吸引！MeEdu 的 UI 和交互在开源网校的领域还是有自信的！😄。
+  
+但是！有一个点比较麻烦！那么就是必须通过 `IP:PORT` 的形式访问站点。下面将指导您配置使用域名访问 MeEdu 的服务。
+
+MeEdu 有四个服务，也就是说至少需要四个域名。我们注册的域名比如说 `meedu.vip` 这是一个主域名，在这个主域名下我们可以分配无数个子域名。下面，我将给出我的子域名分配方案供您参考：
+
+| 端口 | 域名 |
+| --- | --- |
+| PC | `edu.meedu.vip` |
+| H5 | `m.meedu.vip` |
+| API 服务 | `api.meedu.vip` |
+| 后台管理 | `admin.meedu.vip` |
+
+域名分配好了之后，我们就要将子域名解析到服务器了（如果您不知道如何将域名解析到服务器IP的话，那么您可以加我的企业微信付费解决😄）。
+  
+**本文下面教程假设您已经完成了域名的解析！如果您未完成解析的话下文教程会走不通的！**
+  
+请执行下面命令：
+
+```
+cd
+
+vi Caddyfile
+```
+
+进入到 `VIM` 编辑器界面，按键盘的 `I` 键进入编辑模式，将下面的代码内容修改（请修改里面的域名为您自己的域名）之后粘贴，然后按 `ESC` 键并输入 `:wq` 保存。
+
+```
+api.meedu.vip {
+    reverse_proxy meedu:8000
+}
+
+edu.meedu.vip {
+    reverse_proxy meedu:8100
+}
+
+m.meedu.vip {
+    reverse_proxy meedu:8200
+}
+
+admin.meedu.vip {
+    reverse_proxy meedu:8300
+}
+```
+
+然后执行下面命令：
+
+```bash
+sudo docker run -d --name meedu-caddy \
+  --restart=always \
+  -p 80:80 -p 443:443 \
+  --network meedu_meedu-network \
+  -v $PWD/Caddyfile:/etc/caddy/Caddyfile \
+  registry.cn-hangzhou.aliyuncs.com/hzbs/caddy:2.8.4-alpine
+```
+
+上述命令执行完成之后等待 `1` 分钟左右就可以通过域名访问 MeEdu 各个端口服务啦。
+
+## 定时任务
+
+请执行下面命令：
+
+```
+crontab -e
+```
+
+第一次执行这个命令会弹出：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240822/D9tXNruTPySjbwRn.webp" />
+
+选择3，也就是输入数字3回车，进入编辑界面，按 `I` 键进入编辑模式，跳转到文件末尾，输入下面内容：
+
+```
+* * * * * cd /home/ubuntu/meedu && docker compose exec meedu php artisan schedule:run
+```
+
+然后按 `ESC` 键，紧接着输入 `:wq` 保存变动。退出编辑模式我们可以执行 `crontab -l` 查看配置内容：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240822/m21WxHF3wnanX6io.webp" />

@@ -16,9 +16,11 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "opensource-install/bg",
+              "opensource-install/required",
+              "opensource-install/bt",
+              "opensource-install/docker",
+              "opensource-install/bt-docker"
             ]
           }
         ]
