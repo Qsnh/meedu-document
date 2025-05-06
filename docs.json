@@ -14,12 +14,27 @@
         "tab": "安装系统",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "背景",
             "pages": [
               "opensource-install/bg",
-              "opensource-install/required",
-              "opensource-install/bt",
-              "opensource-install/docker",
+              "opensource-install/required"
+            ]
+          },
+          {
+            "group": "宝塔",
+            "pages": [
+              "opensource-install/bt"
+            ]
+          },
+          {
+            "group": "Docker",
+            "pages": [
+              "opensource-install/docker"
+            ]
+          },
+          {
+            "group": "其它",
+            "pages": [
               "opensource-install/bt-docker"
             ]
           }
