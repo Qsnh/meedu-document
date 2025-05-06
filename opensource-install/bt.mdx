@@ -1,5 +1,373 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: '宝塔面板安装MeEdu'
 ---
+
+## 准备
+
+首先，您需要准备一台安装有 Linux 操作系统的（如：`Ubuntu`, `Debain`, `CentOS`,`OpenEuler` 等等）的服务器，然后已经安装了宝塔面板。如果您初次进入宝塔面板的话，宝塔面板会提示您安装环境，如下图，请按照下图选择软件版本并安装：
+
+> 需要注意的是 `PHP` 版本必须安装 `7.4` 版本！
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/dXQ1ZjbAOaFeSnDo.webp" />
+
+## 安装 Node
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/bOo4QsiYbnvYyrci.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/4YESpxry4uYKg03q.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/8AvHMV0OKCF3kcw5.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/Joc2NTJmgjeGCeNX.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/sYlMLV0xHM1MYUt1.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/no1MpXoYSsY3Cemr.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/LNDlS5EAYqMh0k6t.webp" />
+
+## PHP 环境
+
+### 安装扩展
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ROja9ta6MebNv7Dx.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ck8KfmOXlYMYyKlK.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/lEhomDJqvLA9Hv2C.webp" />
+
+### 禁用函数
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/rac5Ir4yFjlRqlc3.webp" />
+
+最终修改如下：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/Xc5gJQhEb2umbH9P.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/VFsHvb0i6Q76jY2J.webp" />
+
+## 安装 Redis
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/sVOou0xg9gKygnkq.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/l0MVS99F6HQbqtje.webp" />
+
+
+## 新建站点
+
+### 分配域名
+
+写本篇教程的话我准备了一个主域名 `meedu.vip` ，然后我分配了四个子域名用来安装 MeEdu 系统，分配方案如下：
+
+| 服务 | 域名 |
+| --- | --- |
+| API 服务 | `api.meedu.vip` |
+| PC 端口 | `edu.meedu.vip` |
+| H5 端口 | `m.meedu.vip` |
+| 后台端口 | `admin.meedu.vip` |
+
+您可以按照我的分配方案去做，也可以自行决定子域名的分配，这个没有强制的要求。
+
+### 域名解析
+
+域名分配完成之后，我们需要将四个子域名解析到服务器。解析类型使用 `A` ，如下图：
+
+> 需要注意的是，接下来的安装假设您已经完成了域名的解析配置。否则部分流程可能走不通！
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/uGnIK5tOC4utr1Oz.webp" />
+
+### 创建站点
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ZMKUwfYdE6NuPcrl.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/hfpegNr7dZcbIQhM.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/KIpeDI1RuLqPJeff.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/uNU8u1WNvZ2E5lzl.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/cnGCtxScMNkaDCAg.webp" />
+
+### 最终结果
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/eBldX5jKowd1cAqs.webp" />
+
+
+## 下载程序
+
+浏览器打开 [https://gitee.com/myteng/MeEdu/tags](https://gitee.com/myteng/MeEdu/tags) 点击第一行的下载按钮下载程序（一般第一行就是最新的程序）：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/i7fQtnpS26nJ197x.webp" />
+
+## 上传程序
+
+在编译程序之前我们需要先将下载的程序上传到服务器，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/bMSSHnqVMXgMCErh.webp" />
+
+选择下载的 meedu 程序压缩包并上传，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/I8qzwDvfbVEiFQGx.webp" />
+
+解压压缩包，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/El7hXw4iqdjIaXeb.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/mstgpSptRf7Hker9.webp" />
+
+重命名文件夹，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/WpK8pFbRezCw9hYX.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/BsISxiGqTEKgkWsk.webp" />
+
+## 安装 API 服务
+
+### 程序剪切
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/39UqRrBUL9ni2wPc.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/7pr6Fz1qlmTXtWzP.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/mKJ9N5XYz5m7RaWT.webp" />
+
+### 运行目录
+
+回到网站列表，点击API站点的设置按钮，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/JwdEImySF4j8mDDQ.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/bEipveTlF6z7hi2P.webp" />
+
+### 伪静态
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ki23jLvS2d4JLEY5.webp" />
+
+### SSL证书
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/F2yHXSjaeWYwZURN.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/O1eWx0rH3ZrUDfrI.webp" />
+
+### 安装依赖
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/08Vw16r70DaC5UxL.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/KtxAqmNQKpp1qsC4.webp" />
+
+输入下面命令并回车：
+
+```
+sudo -u www composer install --optimize-autoloader --no-dev
+```
+
+如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/02aDSzU3lqNJdQvq.webp" />
+
+安装成功如下：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/3WQxB4DXZdbCV1oh.webp" />
+
+### 安装程序
+
+浏览器输入地址 `https://api.meedu.vip/install.php` （注意，请将 `api.meedu.vip` 替换为您的 API 站点域名）可以看到如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/yG5MM3yWmnWiTpoI.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/dVYN7ZaVybM5raBQ.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/XEZsEwmt4PdhvOgh.webp" />
+
+### 计划任务
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/3rYTjzhWHndAGrcB.webp" />
+
+脚本内容如下：
+
+```
+sudo -u www bash -c 'cd /www/wwwroot/api.meedu.vip && php artisan schedule:run'
+```
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/745BnVcKPAb7vPw9.webp" />
+
+## 安装后台界面
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/tqAo1fCHsNF8kIdI.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/F3fQBxhzVNhv1tdI.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/TxRcXjZgdoX8LcjC.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ZLy52Jy0jtgDFvnW.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/Caxn3wvGKQEEYmSn.webp" />
+
+输入下面命令并回车：
+
+```
+sudo -u www yarn && sudo -u www yarn build
+```
+
+如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/mqyXZ98rTPWjV9My.webp" />
+
+编译成功之后，点击 `dist` 目录进入到此目录，然后全选-剪切，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/6dKJNQX1OnKZoAYr.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/4Hu9EbinjNrwmGnV.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/912TL27v6cpBqU4C.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/8xwC20ofld5uPIPX.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/yXJfyPjI23ijVqmW.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/wNDwEaUMIPijvQHq.webp" />
+
+回到网站目录，点击后台站点的配置：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/k4DvUC8kHg8NV669.webp" />
+
+选择伪静态，输入下面的配置：
+
+```
+location ~* ^/(?![api].*) {
+    try_files $uri /index.html;
+}
+```
+
+如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/8VpO4wbeAQvwwNvq.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/6KrlXL3ghp4Nq1AP.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ri1aOB1sjOGzefxy.webp" />
+
+到这里。我们就可以到浏览器输入 `https://admin.meedu.vip` （注意请将 `admin.meedu.vip` 替换为您的后台站点域名）访问了。输入默认的账号密码登录，在第一次访问后台会提示配置下三端的访问地址，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/h0NXrFHm5Q85FA1d.webp" />
+
+点击保存之后，页面会跳转到后台主界面。
+
+## 安装 PC 界面
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ilvmuxhGnYqCKlyh.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/F3fQBxhzVNhv1tdI.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/TxRcXjZgdoX8LcjC.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ZLy52Jy0jtgDFvnW.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ffeeJ4zjgI8lxjPl.webp" />
+
+输入下面命令并回车：
+
+```
+sudo -u www yarn && sudo -u www yarn build
+```
+
+如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/yvy0kg2poPKmp9ol.webp" />
+
+编译成功之后，点击 `dist` 目录进入到此目录，然后全选-剪切，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/bUkcpq85Imyvbel1.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/JVpNEszSwyxOGRC1.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/NSHksdyrTmMdibdS.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/MIOlxQoNgxlaMB1e.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/lKYzFv2n1H5yuESn.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/6t0XobP3PpaRN7CT.webp" />
+
+回到网站目录，点击PC站点的配置：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/khDf21xpKnX3r5d2.webp" />
+
+选择伪静态，输入下面的配置：
+
+```
+location ~* ^/(?![api].*) {
+    try_files $uri /index.html;
+}
+```
+
+如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/6q9OieSgpeBflEF1.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/jyt6qDWbeShRKnyi.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/2x6RgkLtAoOBbL9f.webp" />
+
+## 安装 H5 界面
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/1P2xowcNo1bGGaew.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/F3fQBxhzVNhv1tdI.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/TxRcXjZgdoX8LcjC.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/ZLy52Jy0jtgDFvnW.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/0MR3LkbIAbtWRPNA.webp" />
+
+输入下面命令并回车：
+
+```
+sudo -u www yarn && sudo -u www yarn build
+```
+
+如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/uMW4t4C6ryN90hN1.webp" />
+
+编译成功之后，点击 `dist` 目录进入到此目录，然后全选-剪切，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/hpCtAKn933EaGwE0.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/LTdqZXBHN5WSEcVX.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/c15cUMMrEHYIuUPD.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/CclNP3H4Qphjp3G5.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/34nkBx7uQYhbKO4F.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/p4phhqJG7PMils2c.webp" />
+
+回到网站目录，点击H5站点的配置：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/HMQqUJwFVc58MO89.webp" />
+
+选择伪静态，输入下面的配置：
+
+```
+location ~* ^/(?![api].*) {
+    try_files $uri /index.html;
+}
+```
+
+如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/kFtm113l9w3gvEQ3.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/7XWx1iYHjKhYmLS3.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/lC9Id5vh70QiW0aS.webp" />
+
+## 收尾
+
+到这里 MeEdu 系统就全部安装完成了。我们可以删除不需要的文件和文件夹：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240819/2DQntXutr4LVBJir.webp" />
 
