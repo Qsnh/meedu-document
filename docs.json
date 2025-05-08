@@ -128,8 +128,15 @@
         "tab": "使用手册",
         "groups": [
           {
-            "group": "API Documentation",
-            "pages": ["api-reference/introduction"]
+            "group": "创建课程",
+            "pages": ["system-usage/course/vod"]
+          },
+          {
+            "group": "装修",
+            "pages": [
+              "system-usage/decoration/pc",
+              "system-usage/decoration/h5"
+            ]
           }
         ]
       },
