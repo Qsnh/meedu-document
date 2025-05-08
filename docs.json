@@ -50,11 +50,34 @@
         ]
       },
       {
-        "tab": "商业版",
+        "tab": "商业版更新日志",
         "groups": [
           {
-            "group": "API Documentation",
-            "pages": ["api-reference/introduction"]
+            "group": "2025年",
+            "pages": ["commercial-version-log/2025/Q1"]
+          },
+          {
+            "group": "2024年",
+            "pages": [
+              "commercial-version-log/2024/Q4",
+              "commercial-version-log/2024/Q3",
+              "commercial-version-log/2024/05",
+              "commercial-version-log/2024/04",
+              "commercial-version-log/2024/03",
+              "commercial-version-log/2024/02",
+              "commercial-version-log/2024/01"
+            ]
+          },
+          {
+            "group": "2023年",
+            "pages": [
+              "commercial-version-log/2023/12",
+              "commercial-version-log/2023/11",
+              "commercial-version-log/2023/10",
+              "commercial-version-log/2023/09",
+              "commercial-version-log/2023/08",
+              "commercial-version-log/2023/07"
+            ]
           }
         ]
       }
