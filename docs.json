@@ -32,16 +32,61 @@
         ]
       },
       {
-        "tab": "使用手册",
+        "tab": "配置手册",
         "groups": [
           {
-            "group": "API Documentation",
-            "pages": ["api-reference/introduction"]
+            "group": "网校解决方案",
+            "pages": [
+              "system-setting/first/quickstart",
+              "system-setting/first/protocol",
+              "system-setting/first/function"
+            ]
+          },
+          {
+            "group": "点播配置",
+            "pages": ["system-setting/vod/aliyun", "system-setting/vod/tencent"]
+          },
+          {
+            "group": "存储配置",
+            "pages": [
+              "system-setting/storage/oss",
+              "system-setting/storage/oss-cdn",
+              "system-setting/storage/cos",
+              "system-setting/storage/cos-cdn"
+            ]
+          },
+          {
+            "group": "支付配置",
+            "pages": [
+              "system-setting/payment/alipay",
+              "system-setting/payment/wechat-base",
+              "system-setting/payment/wechat-jsapi",
+              "system-setting/payment/wechat-native"
+            ]
+          },
+          {
+            "group": "短信配置",
+            "pages": ["system-setting/sms/aliyun", "system-setting/sms/tencent"]
+          },
+          {
+            "group": "登录配置",
+            "pages": [
+              "system-setting/login/qq",
+              "system-setting/login/wechat",
+              "system-setting/login/setting"
+            ]
+          },
+          {
+            "group": "其它配置",
+            "pages": [
+              "system-setting/other/register",
+              "system-setting/other/member-verify"
+            ]
           }
         ]
       },
       {
-        "tab": "更新日志",
+        "tab": "使用手册",
         "groups": [
           {
             "group": "API Documentation",

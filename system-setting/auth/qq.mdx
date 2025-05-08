@@ -1,0 +1,61 @@
+---
+title: "QQ登录"
+---
+
+## 创建应用
+
+QQ互联申请地址：[https://connect.qq.com/](https://connect.qq.com/)
+
+进入QQ互联，点击应用管理，点击创建应用：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/SXKZcHnKTpliLQmjLhNcCJdouBTIsIzO.png)
+
+选择创建网站应用：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/nCsDccCHNHVuYz6IFnDjrEL73JxfadpI.png)
+
+根据要求填写信息：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/VXoUWC5HZ3HGZQDyxTK3VFBwUCOszK8h.png)
+
+点击创建应用按钮之后，会打开下面界面：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/mfSgb9r1drlQPjoRdgl5CUOwLDw6zoBK.png)
+
+- **输入网址**
+
+```
+http://你的域名
+```
+
+- 如果开启了https的话，则输入：
+
+```
+https://你的域名
+```
+
+- **网站回调地址**
+
+```
+https://你的域名/api/v3/auth/login/socialite/qq/callback
+```
+- **提供方：** 请输入你的域名备案的网站名称（注意，是您的域名备案时确定的网站名！是您的域名备案时确定的网站名！）
+- **网站地址备案号：** 请输入您的域名备案号
+
+提交信息后等待审核通过。审核通过之后，点击应用，获取配置信息：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/5HqdyTGBijyAnoZczGV5LvbkNjvRxiOB.png)
+
+打开“后管-系统-系统配置-登录控制”，将AppId和Appkey回填保存，完成配置。
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/PW5hoq9awUnRIrW3bHEgQWQ7BzRpxIik.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/BT2KBh4zjyFSiJLrv2uwn7Uvu0Jeyv7H.png)
+
+## 补充说明
+
+> MeEdu v4.7 及更老版本的 QQ 登录回调地址：
+
+```
+https://meedu的API域名/login/qq/callback;https://meedu的API域名/api/v2/login/socialite/qq/callback;https://替换为你的域名/member/socialite/qq/callback
+```

@@ -1,0 +1,89 @@
+---
+title: "腾讯云点播"
+---
+
+## 一、背景
+
+腾讯云点播是面向音视频、图片等媒体，提供制作上传、存储、转码、媒体处理、媒体 AI、加速分发播放、版权保护等一体化的高品质媒体服务。基于腾讯云点播提供的点播服务 MeEdu 可以轻松的给客户提供全大陆学习用户稳定、快速的学习体验。
+
+## 二、基础配置
+
+### 2.1 获取 `AppId`
+
+进入腾讯云点播控制台（地址：[https://console.cloud.tencent.com/vod/app-manage](https://console.cloud.tencent.com/vod/app-manage)）
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/IyPo7W6OkX82JsB2.webp" />
+
+### 2.2 播放域名
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/D4ZYQSSOmjoULLe9.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/W8KXo69IkjMXHKNc.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/vcgFrZKYM6yCl6YC.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/1pP5dGQQbi1nzhnr.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/ZPZQVARswK2Ag1OR.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/jmUgGbVCzYrRhnJJ.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/8jlTvHmqCDApwkEe.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/4cwsp8fGcuocTUe2.webp" />
+
+### 2.3 域名HTTPS
+
+我们需要先为播流域名申请一个SSL证书。如果您已经准备有SSL证书的话，您可以直接跳过接下来的SSL证书申请流程。浏览器打开链接 [https://console.cloud.tencent.com/ssl](https://console.cloud.tencent.com/ssl)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240813/x1u4FKJM30D4NJzA.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240813/uixHccsbVypwPR6w.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/grSbSRjBA6dfqw2a.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/DPwrJ7xNgmqBDdH9.webp" />
+
+完成SSL的证书申请之后。点击链接 [https://console.cloud.tencent.com/vod/distribute-play/domain](https://console.cloud.tencent.com/vod/distribute-play/domain)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/2sysiLF6tlGvzRiy.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/mUdBwA1ioq1gktXZ.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/gHtEry903pyPgaXB.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/ZlXugwxjUqLpZe5r.webp" />
+
+### 2.4 获取 `SecretId` 和 `SecertKey`
+
+打开右侧链接 [https://console.cloud.tencent.com/cam/user/create?systemType=FastCreateV2](https://console.cloud.tencent.com/cam/user/create?systemType=FastCreateV2)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/apCj7t0sdzNhcQcb.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240820/HCM5ubHS4fR9ty8V.webp" />
+
+### 2.5 `MeEdu` 系统配置
+
+进入到MeEdu后台，左侧菜单选择系统配置：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/1x45pW7dmjiYrJJ1Fl7PFLAV3gUpPVNM.png)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240812/jFiII08dvbNXmvhX.webp" />
+
+按照要求输入配置信息即可。
+
+## 三、购买套餐
+
+腾讯云点播服务是按量使用扣费的。提前购买套餐包的话会获得一定程度的折扣，换句话说就是套餐包的价格比直接从系统账户扣费要便宜。因此，在使用腾讯云点播之前，推荐先购置好套餐包。
+
+购买地址：[https://buy.cloud.tencent.com/vod](https://buy.cloud.tencent.com/vod)
+  
+打开上述地址，我们需要购买两个套餐包，分别是：
+
+- 流量资源包
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240812/0QrTevB7tuYAAXz7.webp" />
+
+- 存储资源包
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240812/t5F9yMo9DHXPzudP.webp" />

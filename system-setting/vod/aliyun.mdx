@@ -1,0 +1,103 @@
+---
+title: "阿里云点播"
+---
+
+## 一、背景
+
+阿里云视频点播（ApsaraVideo VOD，简称VOD）是集视频采集、编辑、上传、媒体资源管理、自动化转码处理（窄带高清™）、视频审核分析、分发加速于一体的一站式音视频点播解决方案。基于阿里云点播服务 MeEdu 可以轻松的为全大陆学员提供流畅的、快速的视频在线学习服务。
+
+## 二、基础配置
+
+### 2.1 获取 `region`
+
+浏览器打开地址 [https://vod.console.aliyun.com/#/storage/list](https://vod.console.aliyun.com/#/storage/list)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/2nAKuYDnovwAdV3oQNqGLWuKZTxAZLep.png)
+
+从上图中已确定，我的视频点播区域是`华东2`。
+
+### 2.2 播放域名
+
+浏览器打开链接 [https://vod.console.aliyun.com/#/domain/list](https://vod.console.aliyun.com/#/domain/list)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/40gpyY5pZBy8nww8.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/06Ey4KarZTBkaghr.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/BtouGwFCV1QWJafw.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/0KS2h1WNnIfsyyR9.webp" />
+
+点击验证之后，可以看到：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/6yKOLMNhFnUerMlT.webp" />
+
+返回域名列表，如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/wqnjYlTAC1tsIR5k.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/V7FbpEwRs9nbKfZ4.webp" />
+
+解析配置完成以后，在等待不超过 15 分钟之后，我们就可以在域名列表看到如下图：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/6w6W4B8HV82sWMM7.webp" />
+
+### 2.3 SSL证书
+
+我们需要给上文添加的点播域名配置一个 SSL 证书。在配置之前，我们需要先弄一张点播域名的 SSL 证书。阿里云提供免费的 SSL 证书，下面将指导您去申请。如果您已经准备好 SSL 证书可以跳过申请步骤。
+  
+浏览器打开链接 [https://yundun.console.aliyun.com/?p=cas#/certExtend/free/cn-hangzhou](https://yundun.console.aliyun.com/?p=cas#/certExtend/free/cn-hangzhou)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/ui508G03K2gWpfNS.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/NzhGDomqmP7nVKn9.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/sWkG8oDsCadl54Jp.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/r4QaHmvDuXB7XNpQ.webp" />
+
+提交申请之后，稍等等待不超过30分钟，就会收到短信通知，一般都会审核成功。现在，我们回到点播域名列表，浏览器打开链接 [https://vod.console.aliyun.com/#/domain/list](https://vod.console.aliyun.com/#/domain/list)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/ZfIUfqdmN6vQIbos.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/99R1D2VQVXoyZZq7.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/gKWlzvACLMojK9bH.webp" />
+
+### 2.4 获取 `AccessKeyId` 和 `AccessKeySecret`
+
+浏览器打开链接 [https://ram.console.aliyun.com/users/create](https://ram.console.aliyun.com/users/create)
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/9FJIdPvznE680Pqy.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/FuG8wKnBnbR4ZUbx.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/QxqZoSVCVA1LfZuC.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/TfEw1XSfEYWwF8wU.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240821/vdHk5cwYvTnu6xaq.webp" />
+
+### 2.5 `MeEdu` 系统配置
+
+进入到MeEdu系统后台，左侧菜单选择系统-系统配置：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240812/59TkSp2mhyRnZj4s.webp" />
+
+按要求输入和选择：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240812/Lp8c1bIAWVroyaWO.webp" />
+
+## 三、购买套餐
+
+阿里云点播服务是按量使用扣费的。提前购买套餐包的话会获得一定程度的折扣，换句话说就是套餐包的价格比直接从系统账户扣费要便宜。因此，在使用腾讯云点播之前，推荐先购置好套餐包。
+  
+购买地址：[https://common-buy.aliyun.com/?commodityCode=vodflowbag#/buy](https://common-buy.aliyun.com/?commodityCode=vodflowbag#/buy)
+  
+- 流量套餐包
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240812/OhqVXqilSCtDcIrG.webp" />
+
+- 存储套餐包
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20240812/Wkitd9KGpJmhDlIp.webp" />

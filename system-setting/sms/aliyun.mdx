@@ -1,0 +1,25 @@
+---
+title: "阿里云短信"
+---
+
+首先，您需要开通阿里云短信。开通后进行如下操作：进入阿里云后台，选择短信服务：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/ipqVQDbH8hlsrvR2Exsk7d65Y3abN8ph.png)
+
+首先，添加签名（如果有的话直接跳过）：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/nrzLgsDcbwxpOv9DnPSbGbc3x2gbyaBg.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/fr4pIM4OoPFnKFcQR4jWeMKgsJKNzEYf.png)按照要求填写，审核很快，基本上一个小时之后肯定审核完成。接下来，添加短信模板：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/58APLfHqwhOWpvUGzZFPYIM6xiMpVQHB.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/AoEjIIt4aun4B8bnhGvOkSnsSbXwi4QU.png)
+
+按照要求填写，这里我给个示例：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/6oa6lO7dymBA6jlNGkeaBv7wKl2OlKwa.png)
+
+这样的话你就拿到了短信签名和模板ID：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/kGparR7cgictEtytEwwneG8NLyr4vIOH.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/vWtkgW6VUqnPQUOlKXmUnkK4183lqlxs.png)
+
+将他们填写到MeEdu后台的短信配置上：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/pfcDVU5kfmVY37EG9APvo5Wpag65Nvcc.png)
+
+接下来，打开阿里云的AccessKey管理：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/nwIjnnpuieoPRdqBNfLaNl2qd0QexHkw.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/CfftumNj9uSjzQzazbNv1EndXGpRG7An.png)
+
+创建用户：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/sDTl6IB7re0R0xogUlfkblOmqB9VIj0k.png)注意勾选编程访问。添加完成之后，在用户列表找到添加的用户，点击添加权限：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/whqvJMvi6cgXvcVUQr21qWVfVqFSrsiL.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/bMciqmdM1Yq8Y2dHJo56jrQcPt3xmElt.png)
+
+把短信相关的权限选上。然后点击用户，进入详情，添加**accessKey**：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/yzfJzSMT2UTM0ApxmT0eSK5RdHRxuPzh.png)
+
+添加完成之后将**accessKeyId 和 accessKeySecret **填写到MeEdu后台的短信配置中：

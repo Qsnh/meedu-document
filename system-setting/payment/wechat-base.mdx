@@ -1,0 +1,28 @@
+---
+title: "微信支付配置"
+---
+
+### 配置须知
+1.微信支付必须要有企业资质，如果您没有企业资质是无法注册微信支付的。注意，个体工商户是可以注册微信支付的。2.微信支付需要绑定已认证的微信公众号一起使用，所以在申请微信支付之前，请您申请并完成微信公众号的认证。
+
+
+### 获取微信公众号的AppId
+进入到微信公众号的后台，往下翻，选择开发 - 基本配置：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/Obhuc6itTZH6QN7NSMsoYbzMd74giCb3.png)在打开的页面中，我们可以看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/sfnhcF9E6bJWS4xsrfO4Jgk4ZfSX9nKD.png)这里的AppID就是我们需要的参数。进入meedu后台-系统-配置：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/0ibVtTj04GJAmhhGw1DF6sI7Tf4MD1IP.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/PcbXfqJ5d6XvWP0l7gbwWfjkG2cGoHxw.png)
+
+
+### 微信公众号与微信支付关联
+依旧是微信公众号后台，选择左侧菜单的微信支付：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/CxllQqNVknjISpS2f6B6VdDO8vZcw3oP.png)往下翻，找到已关联商户号：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/jIk6BTZPsThayEDYHOLOtgjoIdXhWZCv.png)我这里的微信公众号已经与微信支付商户号做了关联，如果您没有关联的话，那么请点击关联（当前页面上方）：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/cbqoOz8aDBetj6Fh49BdRrXgWM71ik3U.png)
+
+
+### 微信支付商户号mchID
+进入微信支付后台，选择导航栏中的账户中心：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/R7uI6S1dfTamqmhXXEESouT6Fl0l8ezQ.png)打开的新页面可以看到左侧菜单，选择商户信息：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/rEwLyOVrQYQosn8w2Zgkt12ooAbA3VDw.png)在打开的页面中可以看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/D36fthVlMSifrrTCTURRzRGUsPSR7Rrm.png)上图中的微信支付商户号就是mchID，我们进入MeEdu的后台微信支付配置输入上面的mchID。![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/HgXT6p4wck6QsbvB1U6moZSX2HzL6Cvk.png)
+
+
+### API证书-退款需要用到
+在打开的界面中，按照要求，首先设置API证书（该证书在微信退款的时候需要用到）：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/NEVoeE2OVM9lhDlYdYRBJ1SUwmbX1cXK.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/bFQi1i5y0K4cQfNwhXU8oF24Cm7l5hpR.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/irU3Lfs7JQz0Y8wCx5WymYDIfDEZ2Edy.png)打开下载的证书工具软件，按照要求输入商户号和商户名：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/MHsEfWAg6CIgQVkwRoPG0pHrV6WFkhcI.png)点击下一步![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/lUrEK2tjFTYk5Hd10Pqzkn8CTxvS7LCe.png)点击复制按钮，之后回到微信支付后台，在输入框中粘贴复制的内容：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/IXyy4FRiD7AG1aPEskdP9UJiJz84IkWr.png)微信支付后台会提示做安全校验：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/TA1iKbGmCEK6xmH6cIeBHoihaQbiVwOt.png)校验之后，可以看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/RcQLaZrwbUsN4p9TcDXd461JIkWOIX8d.png)点击“复制证书串”，接着，我们重新回到“证书工具”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/kCEuxLqAoAasqeH9cpbIlDpNBvRwKTmd.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/OXzce3UiQ8m3rQPQfxq66nrKbJ4nqvTV.png)提示证书申请成功，点击上图中“查看证书文件夹”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/CW6EYMSx4xv8GbsnltoefHLN08EWD52t.png)可以看到多个一个zip压缩包，解压之后打开目录可以看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/y2LXFbVuGSLixEvn9hGYZBWXDJJuRFpy.png)上图中的文件就是生成的API证书，其中的 `apiclient_cert.pem` 和 `apiclient_key.pem` 是使用微信退款时所必须的。将它们配置到 meedu 后台的系统配置-支付配置-微信支付配置，如下图：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/LRxmx2bkG7nMyZ2pBHEpQGmrc34WB0QD.png)
+
+
+### 微信支付key-APIv2密钥和APIv3密钥
+> 在API证书设置完毕之后，接着设置API密钥和APIv3密钥，需要注意的是，**请将该两个密钥设置为相同的值**，也是就会如果您的API密钥是 123 的话，那么 APIv3密钥也设置为 123。
+
+依旧是微信支付后台-账户中心，选择左侧菜单的API安全：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/W6PQVJxpbQ7vpNbC0KeqNYi8PTPD4rAw.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/wB2zuVff7BKgIiNYE6UQVfATgJHFvKJt.png)在设置完API密钥和APIv3密钥之后，请将这个密钥的值配置到MeEdu后台的支付配置中。![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/lp5lOsbCHeFl5ocBPUL45t2fA2rGiHAL.png)**微信支付配置仍未完成，PC端、H5端、微信浏览器端仍需继续配置，请看下一节文档内容。**

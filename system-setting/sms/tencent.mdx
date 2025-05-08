@@ -1,0 +1,48 @@
+---
+title: "腾讯云短信"
+---
+
+
+首先，您需要开通腾讯云短信。产品网址：[https://cloud.tencent.com/product/sms](https://cloud.tencent.com/product/sms)
+
+其次，您可能需要购买短信套餐包（套餐包价格更便宜），网址：[https://buy.cloud.tencent.com/sms](https://buy.cloud.tencent.com/sms)
+
+腾讯云短信开通完成后，如下操作。
+
+进入腾讯云短信控制台网址：[https://console.cloud.tencent.com/smsv2](https://console.cloud.tencent.com/smsv2)
+
+
+### SdkAppId
+进入到腾讯云短信控制台：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/xHJPgtRHS0QDF2z5f1V9jicUq2iDoCEa.png)选择左侧菜单的应用列表，在打开的界面点击“创建应用”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/2F9NVaqf528m8d5Aur7y5nfYaY0JdfUO.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/To1Sm8ZUXeO7VeOEGhpOXNWNgVrCTnJH.png)点击创建之后就可以在应用列表看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/y9N7xheoKXj1mQOFWDdm2LwBEzvImKPJ.png)上图中红色方框内的就是SdkAppId，请记住这个值，后面我们需要回传到MeEdu短信配置中。
+
+
+### SignName
+进入腾讯云短信控制台，选择国内短信-签名管理：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/UtwpdXJzQ4UoU53BvilxmCfl1r62ppfK.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/xtEeH4zV9f1vcLHmiuoZRjsaD7zCXlH8.png)点击创建签名：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/UzHuwMgkH8TPG3QuQ0Am7y0bDdWJsRnK.png)请按照要求输入信息，然后点击确定，之后可以在签名列表看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/BmCFllzhwAOBdtk0DkZc9v1wmvlmJOqq.png)上图是我已经申请过的签名，上图红色方框显示是“已通过”，刚申请的签名需要等待审核，之后审核通过之后才能够使用。**上图中的列表内容栏目，对应的就是SignName**，请记住这个值，后面我们需要回传到MeEdu短信配置中。
+
+
+### 短信模板
+进入腾讯云短信控制台，选择国内短信-正文模板管理：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/hExT8SLKCeYgOYUwNRebJz5aEawr2Teb.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/eUpCAjnnVqu7ZcrDSwkwXB1aFs0JYjuK.png)点击创建正文模板：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/aCNEB3XkVE6GekLuym4XlZqXkgmHRRHI.png)登录模板内容：
+```
+验证码为：{1}，您正在登录，若非本人操作，请勿泄露。
+```
+注册模板内容：
+```
+您的注册验证码：{1}，如非本人操作，请忽略本短信！
+```
+找回密码模板内容：
+```
+验证码为：{1}，您正在重置密码，若非本人操作，请勿泄露。
+```
+换绑手机号模板内容：
+```
+您正在修改注册手机号码，验证码为：{1}，为保障帐户安全，请勿向任何人提供此验证码。
+```
+申请了四个模板之后，可以在模板列表看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/G3a5mAl5zTppE3UUhir5XUxwQldq9yEk.png)上图红色方框内的就是我们需要的模板ID，请记住这些ID，后面我们需要配置到meedu系统中。
+
+
+### SecertId,SecretKey
+请打开该网址：[https://console.cloud.tencent.com/cam](https://console.cloud.tencent.com/cam)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/W3nADjsjDJB4n1Ql1o9fxvQfqjitAK8N.png)点击新建用户：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/cksZ4aTaapLPV1Xl37Tnh5eiPGNDpfPX.png)点击快速创建：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/sc5GQ0FZquMAkQW6p5CG5PUKj73GvX0n.png)点击创建用户：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/G4CO483gb4tOuyVVG3brvE8VtXDYka0d.png)校验通过之后：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/K5A39fdDhCORfD0QpNDiTQrZUDblJYFB.png)上图中红色方框内的就是我们需要的**SecretId,SecretKey**，请记住这两个值，后面我们需要回传到MeEdu短信配置中。
+
+
+### 填写MeEdu短信配置
+打开MeEdu后台，左侧菜单选择系统-系统配置：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/oLv8mfuPwPxa23JINIHeuvODDcdrZLc8.png)找到“短信服务”，选中它：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/s4vwEWdH2gsocZJMEWaSxS6rPwU8OaCN.png)界面往下翻：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/znMwtbp6IQ7cUDpEk77ou8t27ejQKSP0.png)对照入住，填写本文前面获取到的配置值。

@@ -1,0 +1,69 @@
+---
+title: "实人认证"
+---
+
+## 准备条件
+
+- 已通过认证的微信公众号（服务号）
+
+## 获取 `SecretId` 和 `SecretKey`
+
+打开 [https://console.cloud.tencent.com/cam](https://console.cloud.tencent.com/cam) 网址（如果未登录腾讯云的话会跳转到登录界面，登录之后请重新打开），在打开的页面点击『新建用户』：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/NhZGLpx1PgjZc4nfJH883LKwdOIZbx0U.png)
+
+点击『快速创建』：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/pLcHWmY5a4VfFIg6s9fz4ep9jJ4K5wTa.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/KOygeQ3JXH1Sbtw6UlCIcaFPrfFoG588.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/7TxSMomXvtuEsjuZQnwcNtpHCGABDG3A.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/qRYzS00azBB8sC8dQtNsDxjM0EEUS47a.png)
+
+最终如下图：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/efEtdtN0x13FS6FSyBdj1p2yWOPgt8hr.png)
+
+点击『创建用户』，提示创建成功：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/vkeGC9jWACXjTcKESHHv8WiF21SGKmU7.png)
+
+上图中的 SecretId 和 SecretKey 就是我们需要的配置了。然后进入到 meedu 后台，系统-系统配置-实名认证：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/BFjjDKhLTYS94WB4QOFgAV5L4XaeN3RX.png)
+
+输入`SecretId`和 `SecretKey` ，如下图：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/KtrXVzqIoT0POBGUNbFtcDR0AJpjFSw0.png)
+
+## 开通服务
+
+打开 [https://console.cloud.tencent.com/faceid/access](https://console.cloud.tencent.com/faceid/access) 网址（如果您未登录腾讯云则会自动跳转到登录界面，请完成登录之后打开；如果您未开通腾讯云的『人身核验』的服务，则会提示您开通，请开通服务之后打开）。
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/WrUQSJLhHrkdkwkaUDhMxT5k7gCTAbnW.png)
+
+选择『微信H5/小程序服务』的标签，然后点击『创建业务流程』
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/7Rcdw94tJChWJUAXuYYysQ578WNAldBi.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/rYEuQ1GTE77s3h0sPtt3ONr4PtEPxyTq.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/KsvpJ9HqQTFn9sa3JZEA2dJtw1Xeussm.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/7Q0kzltQmo6AsKVI90abfsLpv6GR79qc.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/NI2Y30bG3WpvAkxA387lAhcHQH8EhQFC.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/XcIAqIMg3mttSv0LWfGqfLpCdZpAjtth.png)
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/P0HxvzG5wRg64Bfw1YcjcEfaucmwFMJX.png)
+
+到这里创建完成，等待审核。回到 [https://console.cloud.tencent.com/faceid/access](https://console.cloud.tencent.com/faceid/access) 可以看到
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/Cj4BKu6izwiP9WLLmt64Ch5GfU1322OW.png)
+
+从上图中可以获取到 RuleID ，请将此值填写到 meedu 后台，系统-系统配置-实名认证
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/KNavpeA6DFzQDyMpvVqB2lrvPGvg9LEN.png)
+
+等待申请审核通过之后就可以使用了。
