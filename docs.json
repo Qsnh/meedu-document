@@ -49,19 +49,34 @@
           {
             "group": "存储配置",
             "pages": [
-              "system-setting/storage/oss",
-              "system-setting/storage/oss-cdn",
-              "system-setting/storage/cos",
-              "system-setting/storage/cos-cdn"
+              {
+                "group": "阿里云OSS",
+                "pages": [
+                  "system-setting/storage/oss",
+                  "system-setting/storage/oss-cdn"
+                ]
+              },
+              {
+                "group": "腾讯云COS",
+                "pages": [
+                  "system-setting/storage/cos",
+                  "system-setting/storage/cos-cdn"
+                ]
+              }
             ]
           },
           {
             "group": "支付配置",
             "pages": [
               "system-setting/payment/alipay",
-              "system-setting/payment/wechat-base",
-              "system-setting/payment/wechat-jsapi",
-              "system-setting/payment/wechat-native"
+              {
+                "group": "微信支付",
+                "pages": [
+                  "system-setting/payment/wechat-base",
+                  "system-setting/payment/wechat-jsapi",
+                  "system-setting/payment/wechat-native"
+                ]
+              }
             ]
           },
           {
