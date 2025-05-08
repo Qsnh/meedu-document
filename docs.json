@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "MeEdu文档",
   "colors": {
     "primary": "#3ca7fa",
     "light": "#3ca7fa",
     "dark": "#3ca7fa"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
@@ -15,28 +15,19 @@
         "groups": [
           {
             "group": "背景",
-            "pages": [
-              "opensource-install/bg",
-              "opensource-install/required"
-            ]
+            "pages": ["opensource-install/bg", "opensource-install/required"]
           },
           {
             "group": "宝塔",
-            "pages": [
-              "opensource-install/bt"
-            ]
+            "pages": ["opensource-install/bt"]
           },
           {
             "group": "Docker",
-            "pages": [
-              "opensource-install/docker"
-            ]
+            "pages": ["opensource-install/docker"]
           },
           {
             "group": "其它",
-            "pages": [
-              "opensource-install/bt-docker"
-            ]
+            "pages": ["opensource-install/bt-docker"]
           }
         ]
       },
@@ -45,9 +36,7 @@
         "groups": [
           {
             "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           }
         ]
       },
@@ -56,9 +45,7 @@
         "groups": [
           {
             "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           }
         ]
       },
@@ -67,28 +54,18 @@
         "groups": [
           {
             "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           }
         ]
       }
     ],
-    "global": {
-      
-    }
+    "global": {}
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Gitee",
-        "href": "https://gitee.com/myteng/MeEdu"
-      }
-    ],
     "primary": {
       "type": "button",
       "label": "首页",
@@ -97,9 +74,7 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/qsnh/meedu"
     }
   }
 }
