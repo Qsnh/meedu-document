@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "linden",
+  "theme": "mint",
   "name": "MeEdu文档",
   "colors": {
     "primary": "#3ca7fa",
