@@ -1,0 +1,55 @@
+---
+title: '腾讯云COS存储'
+---
+
+> 该功能自meedu v4.5版本开始支持！！！
+
+腾讯云COS控制台地址：[https://console.cloud.tencent.com/cos5](https://console.cloud.tencent.com/cos5)
+
+
+## Bucket
+进入到腾讯云COS控制台，选择“存储桶列表”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/X4KS79rbeQDb89lpkrBQCmf8SgoKduvO.png)点击“创建存储桶”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/NHufUpGG21ubBEPmYrd67q9cxHXepmOu.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/Rapon2202s2H4IKcC4MQ5AHkfIsYdTFN.png)点击“下一步”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/uPAL03xl04kt7KRwXZhpmcwDhZ0DaC6q.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/lV5mPR8T0JzVlDDC6Wzib4bpZYMkNcVg.png)点击“创建”，之后会提示创建超过，且界面跳转到文件列表：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/F9Oajujf0XiGuIKZw7lI2623WndPToVj.png)到这里，存储桶创建超过。还记得在创建存储桶输入的名称吗？也就是上面截图中的“meedu”，这个meedu就是Bucket，请记住这个值，后面需要配置到meedu系统中。
+
+## Region
+上面我们创建了存储桶，在创建存储桶的时候，我们选择了区域，比如说，上文中，我们选择的是“南京”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/gbQwM627kXBcRpu0xDEXiCaieTT43LYk.png)请按照下表对照找出您所选择的区域对应的Region值：
+
+| 区域 | Region值 |
+| --- | --- |
+| 北京一区 | ap-beijing-1 |
+| 北京 | ap-beijing |
+| 南京 | ap-nanjing |
+| 上海 | ap-shanghai |
+| 广州 | ap-guangzhou |
+| 成都 | ap-chengdu |
+| 重庆 | ap-chongqing |
+| 深圳金融 | ap-shenzhen-fsi |
+| 上海金融 | ap-shanghai-fsi |
+| 北京金融 | ap-beijing-fsi |
+
+我的是南京，所以对应的region值是“ap-nanjing”。请记住这个值，后面需要配置到meedu系统中。
+
+
+## AppId
+进入到腾讯云COS控制台（[https://console.cloud.tencent.com/cos5](https://console.cloud.tencent.com/cos5)），选择“存储桶列表”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/77r9evWVTJfYThPDbfWZ3PAhWU9NFhXW.png)点击之后会进入该存储桶的文件列表：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/2IDEICqg1nyoWCbYkIrlnbKlFRuFoms8.png)上图中红色方框内的数字就是我们需要的**AppId**，请记住这个值，后面需要配置到meedu系统中。
+
+
+## SecretId,SecretKey
+进入到腾讯云COS控制台（[https://console.cloud.tencent.com/cos5](https://console.cloud.tencent.com/cos5)），将鼠标滑动到右上角头像位置：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/ULrlkhsPkftJXIh1m70xviXyS0U1pRix.png)点击访问管理：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/0yVJTLzl0GZmf9JaA71tKYU6sMPZAHvb.png)点击用户列表，点击“新建用户”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/wMETYpWwYsipSfM6HvDD0YkH14GAJI1o.png)点击快速创建：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/BMp2aHrDnXzikygZLMce7zvpdUR8n23c.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/BYdhOdE5q8LEl2srnjHbXiEZqFHern7m.png)选择编程访问，点击“确定”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/WN5AQXYOyi5Fnuxf0zbvC9NwEOq3iQ9q.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/WiEEJwcuQFQEJ3dtYHzMu7Q4cKMfG7eN.png)接着点击『确定』：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/wkH2sEqcX1YJNXrI8h0T46ASVIqFLbcC.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/4grOyfqp2Z6IVefFNmsM9ZUlKLdFPqZU.png)校验通过后：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/fWtZSHS0erWiWLRrEqlCsZxcfXseZYXY.png)上图中，红色方框内的就是我们需要的**SecretId和SecretKey**。请记住这两个值，后面我们需要配置到MeEdu系统中。
+
+
+## 绑定CDN域名
+进入到腾讯云COS控制台（[https://console.cloud.tencent.com/cos5](https://console.cloud.tencent.com/cos5)），选择“存储桶列表”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/M7J7G1s8ell1KOWIlYdgFmBq87NvlY3F.png)点击之后会进入该存储桶的文件列表：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/Rt41ZJ6xV86lodybZxR2fyfhxRN81dGq.png)选择“自定义CDN加速域名”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/t11t0AynZCNNxUqfGKTUVEkbqaSQWKwH.png)点击“添加域名”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/OMDTpaC8MlWLlunQMtpM1mCDwmYboafC.png)提示：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/WpoD7b3lC2TgpTtiReSqShoSiYyBjSVq.png)接下来，我们需要配置域名CNAME解析，其中CNAME解析的值就是已添加域名列表中给出的（见下图红色方框内）：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/jSESd01crHrQqD49wL93eGinp5ZOm2Xr.png)下面，我给出一个阿里云DNS的CNAME解析配置截图，仅供参考：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/aRIljCik5nEqZOhYbqour0aDc2z4qL3u.png)解析添加成功之后，在等待最多不超过30分钟，我们就可以看到已添加的域名显示如下图：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/y8dZc6ERkWt3LuiojXPitmfs1lrs0FD3.png)这里我们添加的 “meedu-cos.meedu.tech” 就是CDN域名，请记住这个值，后面需要配置到MeEdu系统中。
+
+
+## CDN域名开启HTTPS
+
+### 申请SSL证书
+在绑定了CDN域名之后，我们还需要为该域名配置HTTPS证书。在配置之前，我们需要先申请SSL证书，腾讯云有提供免费的SSL证书申请服务。SSL证书申请地址：[https://console.cloud.tencent.com/ssl](https://console.cloud.tencent.com/ssl) 打开该网页：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/pQEJE7cbP9a3AXzjZ7NdlS1gphvncejc.png)点击“申请免费证书”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/lf4gMN4JsAcw94WZLg7TojNjkT70p45g.png)点击“确定”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/go0YWqBtO31Bm624onmfz3N0Kg9KLKXn.png)点击下一步：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/HQ0MuYiSQGhRlo0TPEesGiNmmeKC6jap.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/FIyA9DoFYyqugbtzk9MmarZmzZfZBI5f.png)需要添加一条TXT记录用于验证，下面我将给出阿里云DNS的配置参考图，仅供参考：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/BWYoUqBPuMqlsA8OoNvd8lY8Y9EuOq5c.png)记录添加之后，在等待不超过30分钟的时间，期间可持续点击“查看验证验证状态”按钮：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/tREM0kh9hFYFa1yRFnfWE9ChZvn5zIrB.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/5cvtQa0bqMuU7kHASLsOWgwnbi7bA4SU.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/GADFHLGswc3fTnUxw4XuwEjYOUEOjCbL.png)验证通过之后，就是等待机构签发，这个过程一般不超过30分钟。下面假设您已经成功的申请了SSL证书。
+
+
+### 绑定SSL证书
+打开下面地址：[https://console.cloud.tencent.com/cdn/domains](https://console.cloud.tencent.com/cdn/domains)找到我们添加的COS的CDN域名：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/VTFGqJjxQdVTrSm7ICycLkJKQNHEsxWs.png)点击管理：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/ObLy1O9G3kqVCO9ZQvkrohVzJ1s9bljO.png)选择HTTPS配置，点击“配置证书”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/z8peIzCwIS3oavBL6E8CpptFCBui9uLL.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/06K4PnvcyW1gq8Loc5EOKcVZNBjmr0kA.png)到这里，已成功开启HTTPS。
+
+
+## 配置到meedu系统中
+打开“MeEdu后台-系统-系统管理-图片存储”图片存储驱动选择“腾讯云COS”![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/gzwPSagwut3rvLD6S2o2RdNgvPJ7vPIW.png)当前界面往下翻，找到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/u4kSBeuHoWZhxMIeX9B3XbYHYS2rxXpB.png)将本文上文中的配置教程获取的参数值填入其中，保存配置完成。

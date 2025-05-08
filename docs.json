@@ -82,6 +82,30 @@
               "system-setting/other/register",
               "system-setting/other/member-verify"
             ]
+          },
+          {
+            "group": "meedu <= 4.9.12",
+            "pages": [
+              "system-setting/previous/4.9.12/storage/oss",
+              "system-setting/previous/4.9.12/storage/cos"
+            ]
+          },
+          {
+            "group": "meedu <= 4.9.11",
+            "pages": [
+              {
+                "group": "微信公众号",
+                "pages": [
+                  "system-setting/previous/4.9.11/wechat-mp/base",
+                  "system-setting/previous/4.9.11/wechat-mp/message",
+                  "system-setting/previous/4.9.11/wechat-mp/menu"
+                ]
+              },
+              {
+                "group": "短信",
+                "pages": ["system-setting/previous/4.9.11/sms/yunpian"]
+              }
+            ]
           }
         ]
       },

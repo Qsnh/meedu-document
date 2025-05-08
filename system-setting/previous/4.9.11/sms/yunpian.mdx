@@ -1,0 +1,45 @@
+---
+title: '云片短信'
+---
+
+进入到云片（地址：[https://www.yunpian.com/](https://www.yunpian.com/)）的管理控制台。在左侧菜单找到账户设置，点击“账户设置”，在打开的界面，选择“子账户设置”。如下图：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/edZHOxmgG1x0Il5sQ6zGUUuAYwaLc4kU.png)点击“新增子账号”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/QNDqO7W8lzWLmlopeOZrjiiU0dMlybP0.png)按照要求输入信息，点击“确定”。添加成功之后，我们会看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/yiMPdyQxoNq21wIFXw8RMhScZ7ABV4wi.png)上图红色方框内的就是我们需要的APIKEY，点击小眼睛图标，会打开一个身份验证窗口：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/wMzahBkGy4D5f1pqTRPLe3NIO7R09Zey.png)手机号校验成功之后，将会看到：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/8kCEERWNWOQKXNl4qrvnwoTCKsekUFYx.png)红色方框内的就是我们需要的APIKEY，复制这个文本并填写到 “MeEdu后台-系统-系统配置-短信服务”
+
+然后界面往下翻，找到“云片APIkey”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/H8vDT4KWCCOy2luC8CTVQS3zOQlvMEyL.png)将前面的复制的文本粘贴到这里，然后点击保存。
+
+
+### 短信签名配置
+进入云片，选择国内短信 -> 签名/模板报备，点击“新增签名”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/OjF7VYKzydjsoGfrnWsN2VW23yUiqCLp.png)![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/NOjfOmCBaN7vpReP7j6s4z7bdT4floXp.png)按照要求输入信息，之后点击提交。添加完成之后，你可以在签名报备列表看到已申请的签名，需要注意的，签名必须是**审核成功**之后才能使用。![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/Ko4LCiSUJHLEZj7wIipslqvCqGMD8r8q.png)到这里，短信签名已申请成功。
+
+
+### 短信模板
+短信模板就是用户接收到短信的内容。进入到云片管理控制台，国内短信 - 模板报备：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/3KOc89TMvFAif3L1NcjvyiBQ89Z30jKL.png)进入到模板报备列表，点击“新建模板”：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/Gooubjdm4ARcbjlcH5OQ7heVh4A0r9QZ.png)按照要求输入内容。下面给出MeEdu需要的四个模板内容，仅作参考（你也可以直接使用）：
+
+**密码重置模板内容：**
+```
+您正在进行密码重置操作，验证码为#code#
+```
+**注册模板内容：**
+```
+您正在进行注册操作，验证码为#code#
+```
+**绑定手机号模板内容：**
+```
+您正在进行手机号绑定操作，验证码为#code#
+```
+**登录模板内容：**
+```
+您正在进行登录操作，验证码为#code#
+```
+模板添加成功之后，就可以在模板报备列表看到了，需要注意的是，模板必须是审核通过之后才能够使用：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/hDleFJOUjtNdz81DOvDPgZnIG493Vpqt.png)将上图中的模板栏目的内容分别填写到 meedu后台 - 系统 - 系统配置 - 短信：![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/5zD88eEQ59ejZmdwv30DNSLL2ULW2FM0.png)配置好了，点击保存。
+
+
+### IP白名单
+
+> 该项配置是可选的。
+
+
+为了更安全的使用云片短信，您可以启用IP白名单功能。进入到云片的管理控制台，点击系统设置：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/rxqZ9YJi9tZKJYHM1PONiBqecGkAsbJ9.png)在打开的界面选择“IP白名单”，默认是关闭的。可以点击开启，然后输入您的服务器IP，这样，只有通过您的服务器才能请求云片的API接口（换句话说，只有在您的服务器上才能发送短信）。
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/vQhr0mElKe3JVlD4iH2nggDbGYqlawIT.png)

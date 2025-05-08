@@ -1,0 +1,33 @@
+---
+title: '基础配置'
+---
+
+## 基础配置
+
+首先，您需要进入“后台-系统-系统配置-微信公众号”完成公众号基础配置：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/NQ2XJVv3Qhbb5f9LmYBH8VjSNABJhzDT.png)
+
+这些信息需要您登陆微信公众号平台获取。我们进入到微信公众号平台（链接：[https://mp.weixin.qq.com](https://mp.weixin.qq.com)），登录进入平台后，左侧菜单选择“设置与开发-开发接口管理”：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20241202/DPJjCCV5tumDlveW.webp" />
+
+上图中可以得到 AppId 和 AppSecret （通过点击重置按钮获取最新的值）。 将这里的AppId和AppSecret回填到MeEdu系统配置-公众号配置中。然后按照下图操作：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20241202/UPTaA83gDdX1Dd5f.webp" />
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20241202/8dvfCMtMRuK4dHcD.webp" />
+
+输入信息后提交回到之前的页面，点击“启用”按钮：
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20241202/Xii12zH68fsH04fD.webp" />
+
+将上述流程中配置的 `Token` 和 `EncodingAESKey` 回填到 MeEdu的系统配置 中，也就是这两个：
+
+![image.png](https://minio.meedu.vip/meedu-faq/images/b01a0e23da718a08989311b8b2dfb069/QAvXe0lxdhPOnBhZlb8KqrmLlfhTkW2C.png)
+
+## 域名配置
+
+<img src="https://minio.meedu.vip/meedu-faq/images/20241202/mXkvwOigzRVBnOPm.webp" />
+
+> 需要注意：meedu 的 API 域名的验证文件请放置到 meedu 的 API 程序下的 public 目录！！！
