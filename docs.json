@@ -71,9 +71,9 @@
           {
             "group": "登录配置",
             "pages": [
-              "system-setting/login/qq",
-              "system-setting/login/wechat",
-              "system-setting/login/setting"
+              "system-setting/auth/qq",
+              "system-setting/auth/wechat",
+              "system-setting/auth/setting"
             ]
           },
           {
@@ -130,8 +130,8 @@
     "global": {}
   },
   "logo": {
-    "light": "/logo/logo.svg",
-    "dark": "/logo/logo.svg"
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png"
   },
   "navbar": {
     "primary": {
